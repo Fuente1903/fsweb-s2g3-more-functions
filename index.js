@@ -1,10 +1,13 @@
 // Aşağıdaki görevleri tamamlayın
 
+import { numbers } from "./sample_data";
+
 /*
   GÖREV 1
   - Input:  Bir dosya yolunu (path) parametre olarak alacak bir fonksiyon oluştur.
   - Output: Yazacağın fonksiyon, verilen bir dosya adresideki(path) dosyanın adını vermeli.
   * İpucu:  Dosya adresinin / işaretleri ile bölümlendiğine dikkat et.
+
 
   örnek input:  "C:/Users/johnsmith/Music/Beethoven_5.mp3"
   örnek output: "Beethoven_5.mp3"
@@ -16,8 +19,15 @@
   örnek output: ""
 */
 
-function dosyaAdiniBul(/* kodlar buraya */) {
-  // kodlar buraya
+const uzanti = '\Users\doruk\Desktop\WORKINTECH\GUN2\fsweb-s2g3-more-functions';
+const name = dosyaAdi(uzanti);
+const dosyaAdi = (uzanti);
+console.log(name);
+
+function dosyaAdiniBul(path) {
+  let parcalar = path.split('\Users\doruk\Desktop\WORKINTECH\GUN2\fsweb-s2g3-more-functions');
+  let dosyaAdi = parcalar[parcalar.lenght - 1];
+  return dosyaAdi;
 }
 
 /*
@@ -35,12 +45,26 @@ function dosyaAdiniBul(/* kodlar buraya */) {
   örnek output: 46
 
   örnek input:  [109, 216, 288, 143, 71, 185, -278, 194, 5]
-  örnek output: 104
+  örnek output: 104  
 */
 
-function ortalamaBul(/* kodlar buraya */) {
-  // kodlar buraya
+
+
+function ortalamaBul(numbers) {
+  if (numbers.length == 0) {
+    return null;
+  }
+  let toplam = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    toplam += numbers[i];
+  }
+  return toplam / numbers.length;
 }
+
+console.log (ortalamaBul([1,2,3,4,5,6,7,8,9]));
+
+
+
 
 /*
   GÖREV 3
@@ -62,9 +86,19 @@ function ortalamaBul(/* kodlar buraya */) {
   örnek output: [109, 216, 288, 143, 185, 194]
 */
 
-function ortalamadanBuyukleriBul(/* kodlar buraya */) {
-  // kodlar buraya
+
+
+function ortalamadanBuyukleriBul(numbers, buyuk) {
+  const buyuktur = buyuk(numbers);
+  const sonuc = null;
+  for (let i = 0; < i numbers.length; i++) {
+    if (numbers[i] >= buyuktur) {
+      result.push(numbers[i]);
+    }
+  }
+  return sonuc;
 }
+console.log(ortalamadanBuyukleriBul(1,2,3,4,5));
 
 /* !!!! Burdan aşağısını değiştirmeyin !!!! */
 function as() {
